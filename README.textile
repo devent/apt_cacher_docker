@@ -11,6 +11,8 @@ The default cache directory will be @/var/cache/apt-cacher@
 
 h1. Usage
 
+h2. Installation
+
 Installs the apt-cacher as a Docker container locally.
 
 <pre>
@@ -21,6 +23,18 @@ Removes the apt-cacher container and all files.
 
 <pre>
 make clean
+</pre>
+
+h2. Apt-Proxy
+
+Add the Apt-proxy to your server.
+
+<pre>
+nano /etc/apt/apt.conf.d/01proxy
+</pre>
+
+<pre>
+Acquire::http::Proxy "http://<address>:3142";
 </pre>
 
 h3. Variables
